@@ -1,10 +1,10 @@
 <ui:composition
-        xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:f="http://java.sun.com/jsf/core"
-        xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:ui="http://java.sun.com/jsf/facelets"
-        xmlns:p="http://primefaces.org/ui"
-        xmlns:pa="http://primefaces.org/atlantis">
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pa="http://primefaces.org/atlantis">
 
     <div class="layout-sidebar #{guestPreferences.menuColor}">
         <pa:tabMenu id="tabMenu">
@@ -12,6 +12,15 @@
                 <h:form id="menu-form">
                     <pa:menu widgetVar="AtlantisMenuWidget">
                         <p:menuitem id="m_dashboard" value="Dashboard" icon="pi pi-fw pi-home" outcome="/dashboard"/>
+
+                        <p:submenu id="m_components1" label="Configuration" icon="pi pi-fw pi-star">
+                            <p:menuitem id="m_configuration" value="Enter/Dispaly URL " icon="pi pi-fw pi-home" outcome="/configuration"/>
+                            <p:menuitem id="m_configuration1" value="Pair Source " icon="pi pi-fw pi-home" outcome="/sourcepairing"/>
+                            <p:menuitem id="m_configuration2" value="List Paired Sources  " icon="pi pi-fw pi-home" outcome="/pairedsources"/>
+                            <p:menuitem id="m_configuration3" value="User Management" icon="pi pi-fw pi-home" outcome="/usermanagement"/>
+
+                        </p:submenu>
+
                         <p:submenu id="m_components" label="UI Kit" icon="pi pi-fw pi-star">
                             <p:menuitem id="m_formlayout" value="Form Layout" icon="pi pi-fw pi-id-card"
                                         outcome="/formlayout"/>
